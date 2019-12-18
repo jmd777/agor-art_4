@@ -264,6 +264,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
+                                                                    <connections>
+                                                                        <outletCollection property="gestureRecognizers" destination="77d-iZ-2zh" appends="YES" id="nTH-11-OXL"/>
+                                                                    </connections>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-wf-kQu">
                                                                     <rect key="frame" x="118.5" y="8" width="61.5" height="82.5"/>
@@ -415,20 +418,20 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="70" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-ex-116">
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-kz-ueO">
-                                                                    <rect key="frame" x="0.0" y="23.5" width="9.5" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gratuit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-kz-ueO">
+                                                                    <rect key="frame" x="0.0" y="23.5" width="53" height="23.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="316" placeholderIntrinsicHeight="30" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xPi-lY-3jF">
-                                                                    <rect key="frame" x="29.5" y="20" width="320" height="31"/>
+                                                                    <rect key="frame" x="73" y="20" width="301" height="31"/>
                                                                     <connections>
                                                                         <action selector="slider:" destination="GUv-jV-0Tw" eventType="valueChanged" id="0qv-GJ-0uH"/>
                                                                     </connections>
                                                                 </slider>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCV-0l-yVm">
-                                                                    <rect key="frame" x="369.5" y="25" width="24.5" height="20"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="€uros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCV-0l-yVm">
+                                                                    <rect key="frame" x="394" y="25" width="0.0" height="20"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -448,6 +451,9 @@
                                                             <state key="normal" title="Valider">
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="Valid:" destination="GUv-jV-0Tw" eventType="touchUpInside" id="dyf-De-aZZ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -477,6 +483,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHU-3j-uDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="77d-iZ-2zh">
+                    <connections>
+                        <action selector="controlCatTheatre:" destination="GUv-jV-0Tw" id="EQK-O7-4Tv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3657.971014492754" y="-157.36607142857142"/>
         </scene>
