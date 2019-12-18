@@ -10,8 +10,21 @@ import UIKit
 
 class FiltresViewController: UITableViewController {
 
-    @IBOutlet weak var lbl: UILabel!
+    @IBAction func Valid(_ sender: UIButton) {
+//        recuperer les filtres
+//         retour a l ecran precedent
+        dismiss(animated: true, completion: nil)
+    }
     
+    @IBOutlet weak var lbl: UILabel!
+       
+    @IBAction func controlCatTheatre(_ sender: Any) {
+        print("t")
+    }
+    @IBAction func slider(_ sender: UISlider) {
+           lbl.text = String(Int(sender.value))
+       }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
