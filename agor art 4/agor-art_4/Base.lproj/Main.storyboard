@@ -16,27 +16,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-hZ-9xQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="371"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="366"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfD-ja-mLb">
-                                <rect key="frame" x="0.0" y="479" width="414" height="334"/>
+                                <rect key="frame" x="0.0" y="484" width="414" height="329"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="165" id="9aa-xC-JMA" customClass="EventTableViewCell" customModule="agor_art_Ayite" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="165"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="180" id="9aa-xC-JMA" customClass="EventTableViewCell" customModule="agor_art_Ayite" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aa-xC-JMA" id="SZI-Qj-Pww">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desesparateListe" translatesAutoresizingMaskIntoConstraints="NO" id="Qk3-cP-3Fe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="109" id="PvX-b7-V8j"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="109" id="Z2g-5H-mpT"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="Z2g-5H-mpT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-OC-eoG">
-                                                    <rect key="frame" x="15" y="129" width="384" height="41"/>
+                                                    <rect key="frame" x="15" y="145" width="384" height="41"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kic-Ck-xt1">
                                                             <rect key="frame" x="0.0" y="0.0" width="192" height="41"/>
@@ -77,12 +76,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Qk3-cP-3Fe" secondAttribute="trailing" id="0qv-JL-6xn"/>
-                                                <constraint firstItem="aNV-OC-eoG" firstAttribute="top" secondItem="SZI-Qj-Pww" secondAttribute="top" constant="115" id="2bq-Ar-aE3"/>
+                                                <constraint firstItem="aNV-OC-eoG" firstAttribute="leading" secondItem="SZI-Qj-Pww" secondAttribute="leading" constant="15" id="1L6-pm-Oc1"/>
                                                 <constraint firstItem="Qk3-cP-3Fe" firstAttribute="leading" secondItem="SZI-Qj-Pww" secondAttribute="leading" id="FCW-8N-Nun"/>
-                                                <constraint firstItem="aNV-OC-eoG" firstAttribute="top" secondItem="Qk3-cP-3Fe" secondAttribute="bottom" constant="20" id="W82-vX-m5U"/>
-                                                <constraint firstAttribute="trailing" secondItem="aNV-OC-eoG" secondAttribute="trailing" constant="15" id="hSe-zP-LeB"/>
+                                                <constraint firstAttribute="trailing" secondItem="aNV-OC-eoG" secondAttribute="trailing" constant="15" id="S80-Ef-cVH"/>
+                                                <constraint firstItem="aNV-OC-eoG" firstAttribute="top" secondItem="Qk3-cP-3Fe" secondAttribute="bottom" constant="5" id="TXA-ja-AgQ"/>
                                                 <constraint firstItem="Qk3-cP-3Fe" firstAttribute="top" secondItem="SZI-Qj-Pww" secondAttribute="top" id="ply-ye-WGM"/>
-                                                <constraint firstItem="aNV-OC-eoG" firstAttribute="leading" secondItem="SZI-Qj-Pww" secondAttribute="leading" constant="15" id="s1A-fc-e7K"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -110,7 +108,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Zbx-hZ-9xQ" secondAttribute="top" id="3PV-Xa-HY3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nfD-ja-mLb" secondAttribute="trailing" id="4Xt-wH-TGi"/>
                             <constraint firstItem="nfD-ja-mLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GWa-6T-5Rt"/>
-                            <constraint firstItem="nfD-ja-mLb" firstAttribute="top" secondItem="Zbx-hZ-9xQ" secondAttribute="bottom" constant="20" id="JPQ-ec-HjF"/>
+                            <constraint firstItem="nfD-ja-mLb" firstAttribute="top" secondItem="Zbx-hZ-9xQ" secondAttribute="bottom" constant="30" id="JPQ-ec-HjF"/>
                             <constraint firstItem="gAK-e4-9YN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jtm-xx-ZmM"/>
                             <constraint firstItem="nfD-ja-mLb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LVi-wT-nrK"/>
                             <constraint firstItem="nfD-ja-mLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lot-cb-GG5"/>
@@ -124,6 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Qa-IB-Iau"/>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="mapView" destination="Zbx-hZ-9xQ" id="0Rg-md-Svk"/>
                         <outlet property="tableViewEvent" destination="nfD-ja-mLb" id="kj8-Pe-REY"/>
