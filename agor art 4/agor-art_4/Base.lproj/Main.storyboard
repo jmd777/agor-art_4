@@ -528,7 +528,7 @@
         <scene sceneID="dj0-4w-vv2">
             <objects>
                 <tableViewController title="Description" id="zw8-et-fCW" customClass="EventViewController" customModule="agor_art_Ayite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tld-Hn-EDb" customClass="DescritpionUITableView">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tld-Hn-EDb" customClass="DescritpionUITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -633,7 +633,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="mau-nw-Cpy" secondAttribute="trailing" constant="30" id="12V-6L-osv"/>
                                                 <constraint firstItem="mau-nw-Cpy" firstAttribute="top" secondItem="9lE-vG-X8c" secondAttribute="top" constant="15" id="1Su-4F-O34"/>
-                                                <constraint firstItem="mau-nw-Cpy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9lE-vG-X8c" secondAttribute="leading" symbolic="YES" id="tUi-Wp-aCA"/>
+                                                <constraint firstItem="mau-nw-Cpy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9lE-vG-X8c" secondAttribute="leading" constant="20" symbolic="YES" id="tUi-Wp-aCA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -868,13 +868,19 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="zw8-et-fCW" id="wAl-HY-ZD9"/>
-                            <outlet property="delegate" destination="zw8-et-fCW" id="utp-h0-0Dt"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hAi-By-Yuw"/>
                     <size key="freeformSize" width="414" height="2300"/>
+                    <connections>
+                        <outlet property="date" destination="7U7-57-J6U" id="rw8-e7-P39"/>
+                        <outlet property="genre" destination="Oe2-2d-vMU" id="KxU-xT-iy0"/>
+                        <outlet property="lieu" destination="jsT-XP-li0" id="aOi-ri-kgX"/>
+                        <outlet property="mapViewDescription" destination="dfm-bv-DDB" id="alc-c2-xis"/>
+                        <outlet property="miniDescriptif" destination="mau-nw-Cpy" id="PuC-h1-UsW"/>
+                        <outlet property="participants" destination="Bh0-dt-iTD" id="xWB-B0-kHX"/>
+                        <outlet property="picture" destination="csW-Bf-fuP" id="b26-mz-aWm"/>
+                        <outlet property="prix" destination="F5y-dU-HQX" id="A5p-bn-QLy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgH-gT-4ZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
