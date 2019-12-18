@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+// MARK: =============== déclaration des class Event et User =================
+
 
 class Event{
     let maneEvent: String
@@ -39,9 +41,33 @@ class Event{
         self.longitude = longitude
     }
 }
-/*
 
- */
+class User{
+    let name: String
+    let firstName: String
+    let age: Int
+    let adress: String
+    let city: String
+    let cP: Int
+    let mail: String
+    let picture: UIImage
+    let event: [Event]
+    
+    init(name: String, firstName: String, age: Int, adress: String,city: String, cP: Int, mail: String, picture: UIImage, event: [Event] ) {
+        self.name = name
+        self.firstName = firstName
+        self.age = age
+        self.adress = adress
+        self.city = city
+        self.cP = cP
+        self.mail = mail
+        self.picture = picture
+        self.event = event
+    }
+}
+// MARK: ================== Instance de la classe Event  =====================
+
+
 var eventNtm = Event(maneEvent: "NTM",localateEvent: "l'Olympia",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "ntmListe")!,picturePresentationEvent: UIImage(named: "ntmDescription")!, discipline: "concert", coordinate: CLLocationCoordinate2D(latitude: 48.8578, longitude: 2.35693), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8578,longitude: 2.35693 )
 var eventSylla = Event(maneEvent: "Ahmed Sylla",localateEvent: "salle Pleyel",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "syllaListe")!,picturePresentationEvent: UIImage(named: "syllaDescription")!, discipline: "Théatre", coordinate: CLLocationCoordinate2D(latitude: 48.877, longitude: 2.301), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7,  latitude: 48.877,longitude: 2.301)
 var eventWeeLoveGreen = Event(maneEvent: "Wee Love Green",localateEvent: "l'Olympia",cityEvent: "Paris",dateEvent: "18/12/2019",pictureEvent: UIImage(named: "weeLoveGreenListe")!,picturePresentationEvent: UIImage(named: "weeLoveGreenDescription")!, discipline: "concert", coordinate: CLLocationCoordinate2D(latitude: 48.8538, longitude: 2.3362), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8538,longitude: 2.3362)
@@ -56,6 +82,12 @@ var eventManga = Event(maneEvent: "Manga",localateEvent: "Ateliers du quartier",
 var eventSwallow = Event(maneEvent: "Swallow",localateEvent: "salle Pleyel",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "swallowListe")!,picturePresentationEvent: UIImage(named: "swallowdescription")!, discipline: "Cinéma", coordinate: CLLocationCoordinate2D(latitude: 48.8622, longitude: 2.34211), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8622,longitude: 2.34211)
 var eventGrease = Event(maneEvent: "Grease",localateEvent: "Grand Rex",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "greaseListe")!,picturePresentationEvent: UIImage(named: "greaseDescription")!, discipline: "Théatre", coordinate: CLLocationCoordinate2D(latitude: 48.8707, longitude: 2.34741), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8707,longitude: 2.34741)
 var eventPlaymobil = Event(maneEvent: "Playmobil",localateEvent: "Hôtel des Invalides",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "playMobileListe")!,picturePresentationEvent: UIImage(named: "playMobileDescription")!, discipline: "Expo", coordinate: CLLocationCoordinate2D(latitude: 48.8582, longitude: 2.31289), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8582,longitude: 2.31289)
+
+
+// MARK: ================== Instance de la classe User  =====================
+
+var ayite = User(name: "Ayité", firstName: "Folly", age: 34, adress: "6 square Leibniz",city: "Paris", cP: 75018, mail: "ayite.folly@gmail.com", picture: UIImage(named: "newYork")!, event: [eventNtm, eventSylla,eventWeeLoveGreen,eventLomepal] )
+var Manu = User(name: "Manu", firstName: "Legrand", age: 26, adress: "6 boulevard de la libération",city: "Paris", cP: 75014, mail: "manu.legrand@gmail.com", picture: UIImage(named: "picasso")!, event: [eventNtm, eventSylla,eventWeeLoveGreen,eventLomepal,  eventSwallow, eventGrease, eventPlaymobil] )
 
 var eventTab: [Event] = [eventNtm, eventSylla,eventWeeLoveGreen,eventLomepal, eventFary, eventDanse, eventElephant, eventStarmania, eventPnl, eventStreetArt, eventManga, eventSwallow, eventGrease, eventPlaymobil]
 var event: Event!
