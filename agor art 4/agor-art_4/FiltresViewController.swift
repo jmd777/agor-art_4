@@ -10,8 +10,13 @@ import UIKit
 
 class FiltresViewController: UITableViewController {
 
+
     @IBOutlet weak var lbl: UILabel!
-    
+       
+       @IBAction func slider(_ sender: UISlider) {
+           lbl.text = String(Int(sender.value))
+       }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,6 @@
 		8445DB4C23AA2F6700BC5A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB4023AA2F6600BC5A62 /* SceneDelegate.swift */; };
 		8445DB4E23AA2F6700BC5A62 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB4223AA2F6700BC5A62 /* DescriptionTableViewCell.swift */; };
 		8445DB4F23AA2F6700BC5A62 /* FiltresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB4323AA2F6700BC5A62 /* FiltresViewController.swift */; };
-		8445DB5023AA2F6700BC5A62 /* FiltreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB4423AA2F6700BC5A62 /* FiltreViewController.swift */; };
 		8445DB5523AA2F7E00BC5A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445DB5123AA2F7D00BC5A62 /* Main.storyboard */; };
 		8445DB5623AA2F7E00BC5A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445DB5323AA2F7D00BC5A62 /* LaunchScreen.storyboard */; };
 		8445DB5923AA2FED00BC5A62 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445DB5823AA2FED00BC5A62 /* EventViewController.swift */; };
@@ -31,7 +30,6 @@
 		8445DB4123AA2F6700BC5A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "agor-art_4/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8445DB4223AA2F6700BC5A62 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = "agor-art_4/DescriptionTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		8445DB4323AA2F6700BC5A62 /* FiltresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiltresViewController.swift; path = "agor-art_4/FiltresViewController.swift"; sourceTree = SOURCE_ROOT; };
-		8445DB4423AA2F6700BC5A62 /* FiltreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiltreViewController.swift; path = "agor-art_4/FiltreViewController.swift"; sourceTree = SOURCE_ROOT; };
 		8445DB5223AA2F7D00BC5A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "agor-art_4/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		8445DB5423AA2F7D00BC5A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "agor-art_4/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
 		8445DB5823AA2FED00BC5A62 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = "agor-art_4/EventViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -75,7 +73,6 @@
 				8445DB5823AA2FED00BC5A62 /* EventViewController.swift */,
 				8445DB3823AA2F6600BC5A62 /* EventTableViewCell.swift */,
 				8445DB4323AA2F6700BC5A62 /* FiltresViewController.swift */,
-				8445DB4423AA2F6700BC5A62 /* FiltreViewController.swift */,
 				8445DB4123AA2F6700BC5A62 /* Info.plist */,
 				8445DB4023AA2F6600BC5A62 /* SceneDelegate.swift */,
 				8445DB3723AA2F6600BC5A62 /* ViewController.swift */,
@@ -160,7 +157,6 @@
 				8445DB4A23AA2F6700BC5A62 /* EventLocalate.swift in Sources */,
 				8445DB4623AA2F6700BC5A62 /* ViewController.swift in Sources */,
 				8445DB4523AA2F6700BC5A62 /* AppDelegate.swift in Sources */,
-				8445DB5023AA2F6700BC5A62 /* FiltreViewController.swift in Sources */,
 				8445DB5923AA2FED00BC5A62 /* EventViewController.swift in Sources */,
 				8445DB4E23AA2F6700BC5A62 /* DescriptionTableViewCell.swift in Sources */,
 				8445DB4F23AA2F6700BC5A62 /* FiltresViewController.swift in Sources */,
