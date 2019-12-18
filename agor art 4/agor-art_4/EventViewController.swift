@@ -10,9 +10,6 @@ import UIKit
 import MapKit
 
 class EventViewController: UITableViewController {
-
-  
-    
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var prix: UILabel!
@@ -38,7 +35,7 @@ class EventViewController: UITableViewController {
         lieu.text = eventObjet.localateEvent
         date.text = eventObjet.dateEvent
 
-        let localateEvent = EventLocalate(title: eventObjet.maneEvent,locationName: eventObjet.localateEvent,discipline: eventObjet.discipline, coordinate: eventObjet.coordinate)
+        let localateEvent = EventLocalate(title: eventObjet.maneEvent,locationName: eventObjet.localateEvent,discipline: eventObjet.discipline, coordinate: eventObjet.coordinate, event: eventObjet)
         mapViewDescription.addAnnotation(localateEvent)
         let initialLocation = CLLocation(latitude: CLLocationDegrees(eventObjet!.latitude), longitude: CLLocationDegrees(eventObjet!.longitude))
         centerMapOnLocation(location: initialLocation)

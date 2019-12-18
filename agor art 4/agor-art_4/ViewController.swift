@@ -58,7 +58,7 @@ var eventGrease = Event(maneEvent: "Grease",localateEvent: "Grand Rex",cityEvent
 var eventPlaymobil = Event(maneEvent: "Playmobil",localateEvent: "Hôtel des Invalides",cityEvent: "Paris",dateEvent: "21/12/2019",pictureEvent: UIImage(named: "playMobileListe")!,picturePresentationEvent: UIImage(named: "playMobileDescription")!, discipline: "Expo", coordinate: CLLocationCoordinate2D(latitude: 48.8582, longitude: 2.31289), description: "Nunc velit augue, scelerisque dignissim, lobortis et, aliquam in, risus. In eu eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Curabitur vulputate elit viverra augue. Mauris fringilla, tortor sit amet malesuada mollis, sapien mi dapibus odio, ac imperdiet ligula enim eget nisl. Quisque vitae pede a pede aliquet suscipit. Phasellus tellus pede, viverra vestibulum, gravida id, laoreet in, justo.",numberOfParticipant: 7, latitude: 48.8582,longitude: 2.31289)
 
 var eventTab: [Event] = [eventNtm, eventSylla,eventWeeLoveGreen,eventLomepal, eventFary, eventDanse, eventElephant, eventStarmania, eventPnl, eventStreetArt, eventManga, eventSwallow, eventGrease, eventPlaymobil]
-
+var event: Event!
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
     
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         centerMapOnLocation(location: initialLocation)
         mapView.delegate = self
         for event in eventTab {
-            let localateEvent = EventLocalate(title: event.maneEvent,locationName: event.localateEvent,discipline: event.discipline, coordinate: event.coordinate)
+            let localateEvent = EventLocalate(title: event.maneEvent,locationName: event.localateEvent,discipline: event.discipline, coordinate: event.coordinate, event: event)
             mapView.addAnnotation(localateEvent)
         }
       
@@ -93,7 +93,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(view.annotation as? EventLocalate)
+        let eventLocalate = view.annotation as? EventLocalate
+        event = eventLocalate!.eventObject
+       performSegue(withIdentifier: "descriptionSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -125,14 +127,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-//        performSegue(withIdentifier: "EventCell", sender: nil)
+   
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let newViewController = segue.destination as? EventViewController, let indexPath = tableViewEvent.indexPathForSelectedRow{
-            let event = eventTab[indexPath.row]
+            event = eventTab[indexPath.row]
             newViewController.eventObjet = event
+        }
+        
+        if let newViewController2 = segue.destination as? EventViewController{
+            
+            newViewController2.eventObjet = event
         }
         
     }
