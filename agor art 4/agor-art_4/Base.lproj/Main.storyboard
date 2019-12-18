@@ -1508,15 +1508,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GUv-jV-0Tw" kind="relationship" relationship="rootViewController" id="G1D-8b-4LL"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIU-7m-uMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2747.826086956522" y="-157.36607142857142"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Item-->
         <scene sceneID="ynk-rt-gDM">
             <objects>
                 <tableViewController id="abM-kL-K5h" sceneMemberID="viewController">
@@ -1700,6 +1697,7 @@
                             <outlet property="delegate" destination="abM-kL-K5h" id="dpT-BR-JfB"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="44m-Yz-27z"/>
                     <navigationItem key="navigationItem" id="Jn7-ex-QEv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5R0-Wr-lFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
