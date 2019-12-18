@@ -10,6 +10,12 @@ import UIKit
 
 class FiltresViewController: UITableViewController {
 
+
+    @IBOutlet weak var theatre: UIImageView!
+    @IBOutlet weak var Atelier: UIImageView!
+
+    @IBOutlet weak var Expo: UIImageView!
+    
     @IBAction func Valid(_ sender: UIButton) {
 //        recuperer les filtres
 //         retour a l ecran precedent
@@ -17,9 +23,12 @@ class FiltresViewController: UITableViewController {
     }
     
     @IBOutlet weak var lbl: UILabel!
-       
-    @IBAction func controlCatTheatre(_ sender: Any) {
-        print("t")
+    
+
+    
+    @IBAction func controlCatTheatre(_ sender: UITapGestureRecognizer) {
+        print(theatre.restorationIdentifier!)
+        theatre.alpha = 0.5
     }
     @IBAction func slider(_ sender: UISlider) {
            lbl.text = String(Int(sender.value))
@@ -29,7 +38,6 @@ class FiltresViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
     
 

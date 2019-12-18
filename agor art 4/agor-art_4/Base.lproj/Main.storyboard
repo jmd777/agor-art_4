@@ -131,7 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Qa-IB-Iau"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="4Qa-IB-Iau"/>
                     <connections>
                         <outlet property="mapView" destination="Zbx-hZ-9xQ" id="0Rg-md-Svk"/>
                         <outlet property="tableViewEvent" destination="nfD-ja-mLb" id="kj8-Pe-REY"/>
@@ -249,12 +249,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="03W-JU-6bi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="717.5" height="98.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="607.5" height="98.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="70.5" placeholderIntrinsicHeight="80.5" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V7K-2j-OiN">
                                                                     <rect key="frame" x="8" y="8" width="70.5" height="82.5"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Theatre" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-ho-oue">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" restorationIdentifier="theatre" image="Theatre" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-ho-oue">
                                                                             <rect key="frame" x="0.0" y="0.0" width="70.5" height="62"/>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Théâtre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-he-EV3">
@@ -265,31 +265,17 @@
                                                                         </label>
                                                                     </subviews>
                                                                     <connections>
-                                                                        <outletCollection property="gestureRecognizers" destination="77d-iZ-2zh" appends="YES" id="nTH-11-OXL"/>
+                                                                        <outletCollection property="gestureRecognizers" destination="8Mj-CB-dKj" appends="YES" id="KOz-aO-Scd"/>
                                                                     </connections>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-wf-kQu">
-                                                                    <rect key="frame" x="118.5" y="8" width="61.5" height="82.5"/>
-                                                                    <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Humour" translatesAutoresizingMaskIntoConstraints="NO" id="py9-uc-l9x">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Humour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxv-K7-7Qb">
-                                                                            <rect key="frame" x="0.0" y="60" width="61.5" height="22.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZR9-4J-7LP">
-                                                                    <rect key="frame" x="225.5" y="8" width="60" height="82.5"/>
+                                                                    <rect key="frame" x="118.5" y="8" width="60" height="82.5"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Musée" translatesAutoresizingMaskIntoConstraints="NO" id="mLP-vu-q9I">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Atelier" translatesAutoresizingMaskIntoConstraints="NO" id="mLP-vu-q9I">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrl-YU-m5K">
-                                                                            <rect key="frame" x="4" y="62" width="51.5" height="20.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrl-YU-m5K">
+                                                                            <rect key="frame" x="5.5" y="62" width="49" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -297,9 +283,9 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="omn-n1-ZEW">
-                                                                    <rect key="frame" x="331.5" y="8" width="60" height="82.5"/>
+                                                                    <rect key="frame" x="224" y="8" width="60" height="82.5"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Danse" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-fM-yHG">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Danse" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-fM-yHG" userLabel="Danse">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="61.5"/>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGX-Ag-sdW">
@@ -311,13 +297,13 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="umE-yK-wwV">
-                                                                    <rect key="frame" x="437.5" y="8" width="60" height="82.5"/>
+                                                                    <rect key="frame" x="329" y="8" width="60" height="82.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expos" translatesAutoresizingMaskIntoConstraints="NO" id="WGx-iu-uwx">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="61.5"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-g3-P4c">
-                                                                            <rect key="frame" x="6.5" y="61.5" width="46.5" height="21"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-g3-P4c">
+                                                                            <rect key="frame" x="11" y="61.5" width="38" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -325,13 +311,13 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JXy-O9-LlU">
-                                                                    <rect key="frame" x="538" y="8" width="70.5" height="82.5"/>
+                                                                    <rect key="frame" x="433.5" y="8" width="62" height="82.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Concert" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-z7-qvM">
-                                                                            <rect key="frame" x="5.5" y="0.0" width="60" height="61.5"/>
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="61.5"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0il-Rr-RHU">
-                                                                            <rect key="frame" x="0.0" y="61.5" width="70.5" height="21"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0il-Rr-RHU">
+                                                                            <rect key="frame" x="0.0" y="61.5" width="62" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -339,12 +325,12 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-r9-bnv">
-                                                                    <rect key="frame" x="649.5" y="8" width="60" height="82.5"/>
+                                                                    <rect key="frame" x="539.5" y="8" width="60" height="82.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Cinéma" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-BB-eV9">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="62"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ciné" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-Rx-ugu">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cinéma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-Rx-ugu">
                                                                             <rect key="frame" x="0.0" y="62" width="60" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -479,13 +465,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Filtres" id="iO8-ex-92j"/>
                     <connections>
+                        <outlet property="Atelier" destination="K5c-fM-yHG" id="ESQ-Xh-EUg"/>
+                        <outlet property="Expo" destination="WGx-iu-uwx" id="BdQ-KJ-36C"/>
                         <outlet property="lbl" destination="5oW-Is-8ct" id="wnf-VR-6WI"/>
+                        <outlet property="theatre" destination="oeS-ho-oue" id="IDg-Ee-Z2W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHU-3j-uDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="77d-iZ-2zh">
+                <tapGestureRecognizer id="8Mj-CB-dKj" userLabel="Tap Gesture Recognizer theatre">
                     <connections>
-                        <action selector="controlCatTheatre:" destination="GUv-jV-0Tw" id="EQK-O7-4Tv"/>
+                        <action selector="controlCatTheatre:" destination="GUv-jV-0Tw" id="5CJ-ri-Smy"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1295,12 +1284,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Atelier" width="60" height="60"/>
         <image name="Cinéma" width="60" height="60"/>
         <image name="Concert" width="60" height="60"/>
         <image name="Danse" width="60" height="60"/>
         <image name="Expos" width="60" height="60"/>
-        <image name="Humour" width="60" height="60"/>
-        <image name="Musée" width="60" height="60"/>
         <image name="Theatre" width="60" height="60"/>
         <image name="danseDescription" width="207" height="184"/>
         <image name="desesparateListe" width="187" height="54.5"/>
@@ -1320,6 +1308,6 @@
         <image name="ntmDescription" width="414" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Thl-ca-hpx"/>
+        <segue reference="pYG-sJ-4IB"/>
     </inferredMetricsTieBreakers>
 </document>
