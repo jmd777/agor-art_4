@@ -13,17 +13,18 @@ class EventViewController: UITableViewController {
 
   
     
+    
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var prix: UILabel!
     @IBOutlet weak var participants: UILabel!
-    @IBOutlet weak var titre: UILabel!
-    @IBOutlet weak var miniDescription: UILabel!
+   
+    //    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var miniDescriptif: UILabel!
     @IBOutlet weak var genre: UILabel!
     @IBOutlet weak var lieu: UILabel!
-    @IBOutlet weak var adresse: UILabel!
+    //    @IBOutlet weak var adresse: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var mapViewDescription: MKMapView!
-    
     var eventObjet: Event!
    
     override func viewDidLoad() {
@@ -31,19 +32,19 @@ class EventViewController: UITableViewController {
     picture.image = eventObjet.picturePresentationEvent
         prix.text = "17 euros"
         participants.text = String("Nombre de places : \(eventObjet.numberOfParticipant)")
-        titre.text = eventObjet.maneEvent
-        miniDescription.text = "Quisque ornare tellus ullamcorper nulla."
+//        titre.text = eventObjet.maneEvent
+       miniDescriptif.text = "Quisque ornare tellus ullamcorper nulla."
         genre.text = eventObjet.discipline
         lieu.text = eventObjet.localateEvent
         date.text = eventObjet.dateEvent
-        
+
         let localateEvent = EventLocalate(title: eventObjet.maneEvent,locationName: eventObjet.localateEvent,discipline: eventObjet.discipline, coordinate: eventObjet.coordinate)
         mapViewDescription.addAnnotation(localateEvent)
         let initialLocation = CLLocation(latitude: CLLocationDegrees(eventObjet!.latitude), longitude: CLLocationDegrees(eventObjet!.longitude))
         centerMapOnLocation(location: initialLocation)
         // Do any additional setup after loading the view.
     }
-    
+
     let regionRadius: CLLocationDistance = 200
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
@@ -61,3 +62,4 @@ class EventViewController: UITableViewController {
     */
 
 }
+
