@@ -1211,12 +1211,12 @@
         <image name="Musée" width="16" height="16"/>
         <image name="danseDescription" width="207" height="184"/>
         <image name="desesparateListe" width="187" height="54.5"/>
-        <image name="icon_calendar" width="16" height="16"/>
-        <image name="icon_discussions_default" width="16" height="16"/>
-        <image name="icon_discusssions_click" width="16" height="16"/>
-        <image name="icon_mappingcard" width="16" height="16"/>
-        <image name="icon_members" width="16" height="16"/>
-        <image name="icon_ticket" width="16" height="16"/>
+        <image name="icon_calendar" width="100" height="100"/>
+        <image name="icon_discussions_default" width="60" height="60"/>
+        <image name="icon_discusssions_click" width="60" height="60"/>
+        <image name="icon_mappingcard" width="90" height="90"/>
+        <image name="icon_members" width="90" height="90"/>
+        <image name="icon_ticket" width="100" height="100"/>
         <image name="icons8-filter_filled" width="100" height="100"/>
         <image name="lomepalDescription" width="414" height="368"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="64" height="60"/>
