@@ -426,7 +426,7 @@
             </objects>
             <point key="canvasLocation" x="2750.7246376811595" y="-195.53571428571428"/>
         </scene>
-        <!--Profile-->
+        <!--Profil-->
         <scene sceneID="oxa-y4-M3P">
             <objects>
                 <viewController id="Zpg-St-V2o" sceneMemberID="viewController">
@@ -448,7 +448,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8bC-Yb-ktx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" selectedImage="person.circle.fill" id="XpP-tc-ReG"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="icon_profil_default" selectedImage="icon_profil_click" id="XpP-tc-ReG">
+                        <inset key="imageInsets" minX="0.0" minY="45" maxX="0.0" maxY="45"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4O-6U-i6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,12 +476,12 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="100.44642857142857"/>
         </scene>
-        <!--Events-->
+        <!--Événements-->
         <scene sceneID="DKg-kT-ZVX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="smi-jJ-cLo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="magnifyingglass.circle.fill" catalog="system" selectedImage="magnifyingglass.circle.fill" id="j7l-He-hpI">
-                        <color key="badgeColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="Événements" image="icon_events_default" selectedImage="icon_events_click" id="j7l-He-hpI">
+                        <inset key="imageInsets" minX="0.0" minY="45" maxX="0.0" maxY="45"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y0n-0K-BzW">
@@ -1194,7 +1196,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Discussions" image="icon_discussions_default" selectedImage="icon_discusssions_click" id="TQY-P8-m7I">
                         <inset key="imageInsets" minX="0.0" minY="45" maxX="0.0" maxY="45"/>
-                        <color key="badgeColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="rDX-iz-alM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1214,15 +1215,17 @@
         <image name="icon_calendar" width="100" height="100"/>
         <image name="icon_discussions_default" width="60" height="60"/>
         <image name="icon_discusssions_click" width="60" height="60"/>
+        <image name="icon_events_click" width="60" height="60"/>
+        <image name="icon_events_default" width="60" height="60"/>
         <image name="icon_mappingcard" width="90" height="90"/>
         <image name="icon_members" width="90" height="90"/>
+        <image name="icon_profil_click" width="60" height="60"/>
+        <image name="icon_profil_default" width="60" height="60"/>
         <image name="icon_ticket" width="100" height="100"/>
         <image name="icons8-filter_filled" width="100" height="100"/>
         <image name="lomepalDescription" width="414" height="368"/>
-        <image name="magnifyingglass.circle.fill" catalog="system" width="64" height="60"/>
         <image name="mangeDescription" width="414" height="368"/>
         <image name="ntmDescription" width="414" height="368"/>
-        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Thl-ca-hpx"/>
